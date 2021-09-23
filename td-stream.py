@@ -13,7 +13,18 @@ client = easy_client(
 stream_client = StreamClient(client, account_id=config.account_id)
 
 def order_book_handler(msg):
-    print(json.dumps(msg, indent=4))
+    # print(json.dumps(msg, indent=4))
+    for content in (msg["content"]):
+        # print(content['BIDS'])
+        for bids in content['BIDS']:
+            print("EXCHANGE : ",bids["BIDS"][0]["EXCHANGE"])
+            print("BID PRICE : ",bids['BID_PRICE'])
+            print("VOLUME : ",bids['TOTAL_VOLUME'])
+            print("-----------")
+
+
+
+
 
 async def read_stream():
     await stream_client.login()
