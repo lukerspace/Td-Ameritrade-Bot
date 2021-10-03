@@ -102,3 +102,9 @@ order()
 #         frequency=client.Client.PriceHistory.Frequency.DAILY)
 # print(json.dumps(r.json(), indent=4))
 
+
+
+
+
+
+
