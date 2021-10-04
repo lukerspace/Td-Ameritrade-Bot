@@ -1,0 +1,23 @@
+{
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::336074070158:role/tda-dev",
+      "role_name": "tda-dev"
+    },
+    {
+      "name": "api_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:ap-northeast-3:336074070158:function:tda-dev"
+    },
+    {
+      "name": "rest_api",
+      "resource_type": "rest_api",
+      "rest_api_id": "w8bfjky601",
+      "rest_api_url": "https://w8bfjky601.execute-api.ap-northeast-3.amazonaws.com/api/"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}

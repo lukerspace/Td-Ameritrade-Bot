@@ -24,8 +24,6 @@ def order_book_handler(msg):
 
 
 
-
-
 async def read_stream():
     await stream_client.login()
     await stream_client.quality_of_service(StreamClient.QOSLevel.DELAYED)

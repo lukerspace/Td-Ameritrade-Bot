@@ -1,17 +1,19 @@
 # Serverless tdameritrade bot
 
-tdameritrade bot get the signal from AWS Lambda using Python Chalice library and the signal came from webhook url from tradingview alert.
+tradingview sent the alert info to AWS lambda via webhook which trigger the td ameritrade bot place the limit/market order.
 
-# tdameritrade
+### tdameritrade
 
-TD Ameritrade API examples for obtaining fundamental data, option chains, and placing orders
+tda-api : TD Ameritrade API for obtaining fundamental data, option chains, and placing orders
 
 ## Download ChromeDriver here:
 
 https://sites.google.com/a/chromium.org/chromedriver/home
+https://sites.google.com/chromium.org/driver/
 
 ### Virtual .\venv\Scripts\activate.bat
 
+python -m venv venv
 pip install virtualenv venv
 .\venv\Scripts\activate.bat
 
@@ -20,6 +22,10 @@ pip install virtualenv venv
 pip intall boto3
 pip install awscli
 aws --version
-aws accesskey&secret
-chalice new-project tradingview
+aws configure
+input accesskey&secret
+
+### Chalice
+
+chalice new-project tda
 chalice deploy/local
