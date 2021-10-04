@@ -6,9 +6,10 @@ tradingview sent the alert info to AWS lambda via webhook which trigger the td a
 
 tda-api : TD Ameritrade API for obtaining fundamental data, option chains, and placing orders
 
-## Download ChromeDriver here:
+### Download ChromeDriver here:
 
 https://sites.google.com/a/chromium.org/chromedriver/home
+
 https://sites.google.com/chromium.org/driver/
 
 ### Virtual .\venv\Scripts\activate.bat
