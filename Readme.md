@@ -1,6 +1,6 @@
 # Serverless tdameritrade bot
 
-tradito AWSngview sent the alert info lambda via webhook which trigger the td ameritrade bot place the limit/market order.
+tradingview sent the alert info to AWS lambda function via webhook which trigger the td ameritrade bot place the limit/market order.
 
 ### Td Ameritrade
 

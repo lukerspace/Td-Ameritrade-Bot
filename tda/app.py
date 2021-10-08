@@ -62,5 +62,28 @@ def order():
     }
 
 
+@app.route('/sell',methods=["POST"])
+def order():
+    webhook=app.current_request.json_body
+    name=webhook["ticker"].upper()
+    # token_path=os.path.join(os.path.dirname(__file__),"chalicelib",'token')
+    # c = auth.client_from_token_file(token_path, config.api_key)
+    mkdir()
+    c = auth.client_from_token_file("/tmp/token", config.api_key)
+    sell_order_market = tda.orders.equities.equity_sell_market(name,quantity=1)
+    r = c.place_order(config.account_id, sell_order_market)
+
+    if r :
+        print("=====")
+        print("Sell Market Order : "+f'{name}')
+
+    return {
+        "status":"success",
+        "message":webhook,
+        "ticker":webhook["ticker"]
+    }
+
+
+
 
 
