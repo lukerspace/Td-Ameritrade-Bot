@@ -2,7 +2,7 @@
 
 tradito AWSngview sent the alert info lambda via webhook which trigger the td ameritrade bot place the limit/market order.
 
-### tdameritrade
+### Td Ameritrade
 
 tda-api : TD Ameritrade API for obtaining fundamental data, option chains, and placing orders
 
@@ -37,3 +37,14 @@ input accesskey&secret
 chalice new-project tda
 
 chalice deploy/local
+
+### Tradingview
+
+{ "open": {{open}},
+"high": {{high}},
+"low": {{low}},
+"close": {{close}},
+"ticker": "{{ticker}}",
+"volume":{{volume}},
+"time": "{{time}}",
+"exchange":"{{exchange}}"}
