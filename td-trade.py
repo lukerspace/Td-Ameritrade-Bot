@@ -64,5 +64,6 @@ def order(c):
     return "order filled"
 
 # order(authenticate())
+# authenticate_auto()
 
 
